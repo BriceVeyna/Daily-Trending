@@ -1,1 +1,1 @@
-# project-one
+# daily-trending
