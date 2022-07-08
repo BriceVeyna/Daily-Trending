@@ -21,3 +21,13 @@ header {
 #submitButton:hover {
     cursor: grab;
 }
+
+#redditButton {
+    border: 1px solid black;
+    width: 150px;
+    height: fit-content;
+}
+
+#redditButton:hover {
+    cursor: grab;
+}
