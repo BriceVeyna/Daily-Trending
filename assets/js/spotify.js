@@ -5,7 +5,7 @@ var client_secret = '978a363fdfc643da8565312058af76b0';
 
 var token = '';
 
-fetch(authOptions.url, {
+fetch('https://accounts.spotify.com/api/token', {
     method: "POST",
     headers: {
         'Authorization': 'Basic ' + Buffer.from(client_id + ':' + client_secret, 'base64'),
