@@ -1,0 +1,204 @@
+/* Grid & base formatting */
+.holy-grail-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 4fr;
+    -ms-grid-rows: 1fr 8fr 1fr;
+        grid-template-rows: 1fr 8fr 1fr;
+    grid-gap: 20px;
+    height: 100vh;
+}
+  
+@media screen and (max-width: 60em) {
+    .holy-grail-grid {
+      -ms-grid-rows: 2fr 1fr 5fr 1fr;
+          grid-template-rows: 2fr 1fr 5fr 1fr;
+    }
+}
+  
+.holy-grail-header,
+.holy-grail-left,
+.holy-grail-middle,
+.holy-grail-footer {
+    padding: 1rem;
+    border: 1px solid #ededed;
+    background-color: #ededed;
+}
+  
+.holy-grail-header {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    text-align: center;
+}
+  
+@media screen and (max-width: 60em) {
+    .holy-grail-left {
+      -ms-grid-row: 2;
+          grid-row-start: 2;
+      -ms-grid-column: 1;
+          grid-column-start: 1;
+      grid-column-end: 4;
+    }
+}
+  
+@media screen and (max-width: 60em) {
+    .holy-grail-middle {
+      -ms-grid-row: 3;
+          grid-row-start: 3;
+      -ms-grid-column: 1;
+          grid-column-start: 1;
+      grid-column-end: 4;
+    }
+}
+  
+@media screen and (max-width: 60em) {
+    .right-nav {
+      -ms-grid-row: 4;
+          grid-row-start: 4;
+      -ms-grid-column: 1;
+          grid-column-start: 1;
+      grid-column-end: 4;
+    }
+}
+  
+.holy-grail-footer {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+
+/* Search bar */
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
+  
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+
+
+/* Switches */
+.switch-toggle-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+  
+.switch-toggle-wrapper .switch {
+    margin-bottom: 0;
+} 
+
+
+/* Cards */
+.card {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.news-section {
+    background: lightgrey;
+    padding: 25px;
+    margin: 25px 0 0 0;
+}
+
+.news-card-tag {
+    margin-bottom: 0.5rem;
+}
+  
+.news-card-tag .label {
+    border-radius: 0.125rem;
+    background-color: #1779ba;
+    color: #fefefe;
+}
+  
+.news-card-tag .label a {
+    background-color: inherit;
+    color: inherit;
+}
+  
+.news-card-tag .label:hover, .news-card-tag .label:focus {
+    background-color: #14679e;
+}
+  
+.news-card-tag .label:hover a, .news-card-tag .label:focus a {
+    background-color: inherit;
+    color: inherit;
+}
+  
+.news-card {
+    background-color: #fefefe;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+    border-radius: 0.125rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    max-width: 400px;
+}
+  
+.news-card .card-section {
+    background-color: inherit;
+}
+  
+.news-card .card-section .news-card-date {
+    font-size: 1em;
+    color: #8a8a8a;
+}
+  
+.news-card .card-section .news-card-article {
+    background-color: inherit;
+}
+  
+.news-card .card-section .news-card-article .news-card-title {
+    line-height: 1.3;
+    font-weight: bold;
+}
+  
+.news-card .card-section .news-card-article .news-card-title a {
+    text-decoration: none;
+    color: #8a8a8a;
+    transition: color 0.5s ease;
+}
+  
+.news-card .card-section .news-card-article .news-card-title a:hover {
+    color: #1779ba;
+}
+  
+.news-card .card-section .news-card-article .news-card-description {
+    color: #8a8a8a;
+}
+  
+.news-card .card-section .news-card-author {
+    overflow: hidden;
+    padding-bottom: 1.6rem;
+}
+  
+.news-card .card-section .news-card-author .news-card-author-image {
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+.news-card .card-section .news-card-author .news-card-author-image img {
+    border-radius: 50%;
+    margin-right: 0.6em;
+}
+  
+.news-card .card-section .news-card-author .news-card-author-name {
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+  
