@@ -48,7 +48,7 @@ function nytGen() {
                 var cardDiv = document.createElement("div");
                 cardDiv.classList.add("card","news-card");
                 var newImg = document.createElement("img");
-                newImg.setAttribute("src", "./assets/images/test.png");
+                newImg.setAttribute("src", data.results[i].multimedia[0].url);
                 cardDiv.appendChild(newImg);
                 newDivTag.appendChild(cardDiv);
 
