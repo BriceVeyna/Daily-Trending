@@ -71,7 +71,39 @@
     grid-column-end: 4;
     text-align: center;
 }
+
+
+/* Search bar */
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
   
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+
+
+/* Switches */
+.switch-toggle-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+  
+.switch-toggle-wrapper .switch {
+    margin-bottom: 0;
+} 
+
+
 /* Cards */
 .card {
     display: inline-block;
