@@ -9,9 +9,7 @@ function youtubeFetch(event) {
   fetch(youtubeURL)
   .then(function(response) {
     if (response.ok) {
-      console.log(response);
       response.json().then(function(data) {
-        console.log(data);
       })
     } else {
       alert('Error: ' + response.statusText);
