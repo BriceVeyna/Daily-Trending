@@ -1,31 +1,46 @@
-function authenticate() {
-  return gapi.auth2.getAuthInstance()
-      .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
-      .then(function() {console.log("Sign-in successful"); },
-            function(err) {console.error("Error signing in", err); });
+var inputField = document.getElementById("inputField");
+var nytDisplay = document.getElementById("nytDisplay");
+var searchButton = $("#submitButton")
+let input;
+
+searchButton.click(function(event) {
+    event.preventDefault
+    input = inputField.value;
+    console.log(input);
+    nytGen();
+})
+
+
+function nytGen() {
+    var url = "https://api.nytimes.com/svc/topstories/v2/" + input + ".json?api-key=3EhjUgQTBGHk7CXrATkMRdAWhhRYQrae";
+    console.log(url);
+    fetch(url)
+        .then(function(response) {
+            if(!response.ok) {
+                console.log("not working");
+                return
+            }
+            return response.json()
+        })
+        .then(function(data) {
+            for (var i=1;i<7;i++) {
+                console.log(data.results[i]);
+                console.log(data.results[i].abstract);
+                var newDiv = document.createElement("div");
+                nytDisplay.appendChild(newDiv);
+                var head = document.createElement("h3");
+                var absP = document.createElement("p");
+                var link = document.createElement("p");
+                var title = data.results[i].title;
+                var abstract = data.results[i].abstract;
+                head.innerHTML = title;
+                absP.innerHTML = abstract;
+                link.innerHTML = data.results[i].short_url;
+                newDiv.appendChild(head);
+                newDiv.appendChild(absP);
+                newDiv.appendChild(link)
+                console.log(data.results[i].short_url);
+            }
+        })
 }
-function loadClient() {
-  gapi.client.setApiKey("AIzaSyC2tms6jUGCiD1_YW1LFaxXj8rue0vuvM4");
-  return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-      .then(function() {console.log("GAPI client loaded for API"); },
-            function(err) {console.error("Error loading GAPI client for API", err); });
-}
-// Make sure the client is loaded and sign-in is complete before calling this method.
-function execute() {
-  return gapi.client.youtube.videos.list({
-    "part": [
-      "snippet,contentDetails,statistics"
-    ],
-    "chart": "mostPopular",
-    "regionCode": "US"
-  })
-      .then(function(response) {
-              // Handle the results here (response.result has the parsed body).
-              console.log("Response", response);
-            },
-            function(err) { console.error("Execute error", err); });
-}
-gapi.load("client:auth2", function() {
-  gapi.auth2.init({client_id: "817405736677-apgm1fpirm1b1ahchn55msop8m0675sb.apps.googleusercontent.com"});
-});
 

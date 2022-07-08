@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: lightgray;
+    height: 150px;
+    width: 100%;
+}
+
+#inputField { 
+    width: 300px;
+}
+
+#submitButton {
+    border: 1px solid black;
+    width: 150px;
+    height: fit-content;
+}
+
+#submitButton:hover {
+    cursor: grab;
+}
