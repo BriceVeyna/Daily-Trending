@@ -6,14 +6,12 @@ var nytDisplay = document.getElementById("times-content");
 searchButton.click(function(event) {
     event.preventDefault
     input = inputField.value;
-    console.log(input);
     nytGen();
 })
 
 
 function nytGen() {
     var url = "https://api.nytimes.com/svc/topstories/v2/" + input + ".json?api-key=3EhjUgQTBGHk7CXrATkMRdAWhhRYQrae";
-    console.log(url);
     fetch(url)
         .then(function(response) {
             if(!response.ok) {
@@ -101,7 +99,6 @@ function nytGen() {
                 //newDiv.appendChild(head);
                 //newDiv.appendChild(absP);
                 //newDiv.appendChild(link)
-                console.log(data.results[i].short_url);
             }
         })
 }
