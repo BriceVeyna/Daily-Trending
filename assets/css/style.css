@@ -205,6 +205,10 @@
     text-align: center;
 }
 
-.news-card-date {
+.rankings {
     color: green;
+}
+
+.channel-icon:hover {
+    cursor: pointer;
 }

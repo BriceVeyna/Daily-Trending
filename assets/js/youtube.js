@@ -92,8 +92,8 @@ async function youtubeFetch(event) {
 
                         // Displaying channel icon
                         channelIconList[0].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                        
-                        
+                        channelIconList[0].setAttribute('data-link', baseChannelURL + data2.items[0].id);
+
                     })
                 } else {
                     alert('Error: ' + response2.statusText);
@@ -120,8 +120,8 @@ async function youtubeFetch(event) {
 
                             // Displaying channel icon
                             channelIconList[1].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                            
-                            
+                            channelIconList[1].setAttribute('data-link', baseChannelURL + data2.items[0].id);
+
                         })
                     } else {
                         alert('Error: ' + response2.statusText);
@@ -148,7 +148,7 @@ async function youtubeFetch(event) {
 
                             // Displaying channel icon
                             channelIconList[2].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                            
+                            channelIconList[2].setAttribute('data-link', baseChannelURL + data2.items[0].id);
                             
                         })
                     } else {
@@ -176,7 +176,7 @@ async function youtubeFetch(event) {
 
                             // Displaying channel icon
                             channelIconList[3].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                            
+                            channelIconList[3].setAttribute('data-link', baseChannelURL + data2.items[0].id);
                             
                         })
                     } else {
@@ -204,7 +204,7 @@ async function youtubeFetch(event) {
 
                             // Displaying channel icon
                             channelIconList[4].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                            
+                            channelIconList[4].setAttribute('data-link', baseChannelURL + data2.items[0].id);
                             
                         })
                     } else {
@@ -232,7 +232,7 @@ async function youtubeFetch(event) {
 
                             // Displaying channel icon
                             channelIconList[5].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
-                            
+                            channelIconList[5].setAttribute('data-link', baseChannelURL + data2.items[0].id);
                             
                         })
                     } else {
@@ -252,17 +252,16 @@ async function youtubeFetch(event) {
   });
 }
 
-function youtubeChannelsFetch(event) {
-    
+youtubeFetch();
 
-    
+/* ---------------------------------------------------------------------------------------- */
 
-    
+// Creating links on the channel icons
+for (var i = 0; i < channelIconList.length; i++) {
+    channelIconList[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log(event.target);
+
+        window.open(event.target.getAttribute('data-link'), "_blank");
+    })
 }
-
-youtubeFetch().then(function(value){
-    console.log(value);
-    youtubeChannelsFetch;
-}, function(error) {
-    console.log('oh no');
-});
