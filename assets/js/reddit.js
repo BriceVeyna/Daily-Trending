@@ -17,6 +17,10 @@ function redditGen() {
                 divBody.classList.add("card","news-card");
                 divCont.appendChild(divBody);
 
+                var img = document.createElement("img");
+                img.setAttribute("src","assets/images/rLogo.png" )
+                divBody.appendChild(img);
+
                 var title = document.createElement("h4");
                 title.classList.add("news-card-title");
                 var a = document.createElement('a');
@@ -29,22 +33,6 @@ function redditGen() {
                 source.classList.add("news-card-author");
                 source.innerHTML = "Source: " + data.data.children[i].data.domain;
                 divBody.appendChild(source);
-
-                
-
-                
-
-
-
-            //     var newDiv = document.createElement("div");
-            //     var head = document.createElement("h3");
-            //     var link = document.createElement("a");
-            //     head.innerHTML = data.data.children[i].data.title;
-            //     link.innerHTML = data.data.children[i].data.url
-            //     link.setAttribute("href", data.data.children[i].data.url)
-            //     display.appendChild(newDiv);
-            //     newDiv.appendChild(head);
-            //     newDiv.appendChild(link);
             }
         })
 }
