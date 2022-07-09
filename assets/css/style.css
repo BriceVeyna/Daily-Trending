@@ -200,3 +200,11 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.card-section {
+    text-align: center;
+}
+
+h3 {
+    color: green;
+}
