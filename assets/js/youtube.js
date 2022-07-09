@@ -48,13 +48,12 @@ var baseChannelURL = 'https://www.youtube.com/channel/'; //Used to link to the c
 var youtubeChannelURL = 'https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics&id=';
 let channelDataURLs = [];
 
-async function youtubeFetch(event) {
+function youtubeFetch(event) {
   //event.preventDefault();
   
   fetch(youtubeURL)
   .then(function(response) {
     if (response.ok) {
-      console.log(response);
       response.json().then(function(data) {
         console.log(data);
         for (var i = 0; i < numberOfVideos; i++) {
