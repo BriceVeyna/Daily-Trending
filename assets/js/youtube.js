@@ -91,7 +91,7 @@ async function youtubeFetch(event) {
                         dataList[0].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                         // Displaying channel icon
-                        channelIconList[0].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                        channelIconList[0].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                         
                         
                     })
@@ -119,7 +119,7 @@ async function youtubeFetch(event) {
                             dataList[1].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                             // Displaying channel icon
-                            channelIconList[1].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                            channelIconList[1].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                             
                             
                         })
@@ -147,7 +147,7 @@ async function youtubeFetch(event) {
                             dataList[2].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                             // Displaying channel icon
-                            channelIconList[2].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                            channelIconList[2].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                             
                             
                         })
@@ -175,7 +175,7 @@ async function youtubeFetch(event) {
                             dataList[3].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                             // Displaying channel icon
-                            channelIconList[3].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                            channelIconList[3].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                             
                             
                         })
@@ -203,7 +203,7 @@ async function youtubeFetch(event) {
                             dataList[4].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                             // Displaying channel icon
-                            channelIconList[4].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                            channelIconList[4].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                             
                             
                         })
@@ -231,7 +231,7 @@ async function youtubeFetch(event) {
                             dataList[5].innerHTML += "<br>Subscribers: " + data2.items[0].statistics.subscriberCount;
 
                             // Displaying channel icon
-                            channelIconList[5].setAttribute('src', data2.items[0].snippet.thumbnails.default);
+                            channelIconList[5].setAttribute('src', data2.items[0].snippet.thumbnails.default.url);
                             
                             
                         })
