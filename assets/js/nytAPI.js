@@ -6,6 +6,7 @@ var nytDisplay = document.getElementById("times-content");
 searchButton.click(function(event) {
     event.preventDefault
     input = inputField.value;
+    console.log(input)
     nytGen();
 })
 

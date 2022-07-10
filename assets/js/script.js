@@ -15,13 +15,13 @@ function getStoredSearches() {
 
     // Pull search array (parsed) from local storage, store in temporary variable, view in console
     localSearches = JSON.parse(localStorage.getItem('Searches'));
-    console.log(localSearches);
-    console.log(storedSearches);
+    //console.log(localSearches);
+    //console.log(storedSearches);
 
     // If there is no local storage (first time use or cleared local storage), the empty program global variable will be used instead of pulling from local storage
     if (localSearches !== null) {
         storedSearches = localSearches;
-        console.log(storedSearches);
+        //console.log(storedSearches);
     }
 
     // Initialize addStoredSearches function
@@ -39,7 +39,7 @@ function addStoredSearches() {
 
         // Create temporary variable for individual stored search, view in console
         var storedSearch = storedSearches[i];
-        console.log(storedSearch);
+        //console.log(storedSearch);
 
         // Create button with search term at index, display on recent search list
         var listRow = document.createElement('a');
