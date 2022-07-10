@@ -1,5 +1,6 @@
 // Global HTML DOM traversal variables
 var searchInputEl = document.getElementById('inputField');
+var searchListEl = document.getElementById('search-list')
 var searchBtn = document.getElementById('searchButton');
 
 // Global variable for local storage
@@ -21,6 +22,30 @@ function getStoredSearches() {
     if (localSearches !== null) {
         storedSearches = localSearches;
         console.log(storedSearches);
+    }
+
+    // Initialize addStoredSearches function
+    addStoredSearches();
+}
+
+// Add stored searches to list under search bar for quick access
+function addStoredSearches() {
+
+    // Clear list each time the function is executed so that it is not repeated
+    searchListEl.innerHTML = '';
+
+    // Iterate over length of stored searches array
+    for (var i = 0; i < storedSearches.length; i++) {
+
+        // Create temporary variable for individual stored search, view in console
+        var storedSearch = storedSearches[i];
+        console.log(storedSearch);
+
+        // Create button with search term at index, display on recent search list
+        var listRow = document.createElement('a');
+        listRow.textContent = storedSearch;
+        listRow.setAttribute('class', 'button');
+        searchListEl.appendChild(listRow);
     }
 }
 
