@@ -12,6 +12,8 @@ var redditContent = document.getElementById("reddit-content");
 var youtubeContent = document.getElementById("youtube-content");
 var spotifyContent = document.getElementById("spotify-content");
 
+var themeSwitch = document.getElementById("exampleSwitch5");
+
 // Global variable for local storage
 var storedSearches = [];
 
@@ -103,7 +105,17 @@ $(document).ready(function() {
 
 //light/darkmode
 
+function darkSwitch(event) {
+    event.preventDefault();
+    if (event.target.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+    }
+}
 
+themeSwitch.addEventListener("change", darkSwitch, false);
+console.log(themeSwitch);
 
 // Initialize getStoredSearches function
 getStoredSearches();
