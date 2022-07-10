@@ -272,5 +272,8 @@
 
 #reddit-content .card {
     padding: 10px;
+}
 
+.content-hide {
+    visibility: hidden;
 }
