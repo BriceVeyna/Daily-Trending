@@ -258,6 +258,18 @@
 }
 
 
+.card-section {
+    text-align: center;
+}
+
+.rankings {
+    color: green;
+}
+
+.channel-icon:hover {
+    cursor: pointer;
+
+
 #reddit-content img {
     width: 100px;
     height: 100px;
@@ -265,4 +277,5 @@
 
 #reddit-content .card {
     padding: 10px;
+
 }
