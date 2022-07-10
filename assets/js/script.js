@@ -2,6 +2,15 @@
 var searchInputEl = document.getElementById('inputField');
 var searchListEl = document.getElementById('search-list')
 var searchBtn = document.getElementById('searchButton');
+var nytSwitch = $("#exampleSwitch1");
+var redditSwitch = $("#exampleSwitch2");
+var youtubeSwitch = $("#exampleSwitch3");
+var spotifySwitch = $("#exampleSwitch4");
+
+var timesContent = document.getElementById("times-content");
+var redditContent = document.getElementById("reddit-content");
+var youtubeContent = document.getElementById("youtube-content");
+var spotifyContent = document.getElementById("spotify-content");
 
 // Global variable for local storage
 var storedSearches = [];
@@ -66,6 +75,35 @@ searchBtn.addEventListener('click', function(event) {
     // Clear search input field
     searchInputEl.value = '';
 })
+
+//result selector
+$(document).ready(function() {
+    $(nytSwitch).click(function() {
+        $(timesContent).toggle();
+    })
+});
+
+$(document).ready(function() {
+    $(redditSwitch).click(function() {
+        $(redditContent).toggle();
+    })
+});
+
+$(document).ready(function() {
+    $(youtubeSwitch).click(function() {
+        $(youtubeContent).toggle();
+    })
+});
+
+$(document).ready(function() {
+    $(spotifySwitch).click(function() {
+        $(spotifyContent).toggle();
+    })
+});
+
+//light/darkmode
+
+
 
 // Initialize getStoredSearches function
 getStoredSearches();
