@@ -11,15 +11,19 @@
 <body>
     <div class="holy-grail-grid">
         
+        <!-- Header with program title, current date & time -->
         <div class="holy-grail-header">
             <h1>The Daily Trending</h1>
-            <h3 id="currentDate"></h3>
-            <h4 id="currentTime"></h4>
+            <h4 id="currentDate"></h4>
+            <h5 id="currentTime"></h5>
         </div>
       
+        <!-- Left aligned toolbar; contains search, filters, and light/dark mode -->
         <div class="holy-grail-left">
+
             <h3>Search</h3>
 
+            <!-- Search bar -->
             <div class="input-group input-group-rounded">
                 <input id="inputField" class="input-group-field" type="search">
                 <div class="input-group-button">
@@ -27,18 +31,21 @@
                 </div>
             </div>
 
+            <!-- Recent searches list -->
             <ul class="list-group">
                 <li class="list-group-item">Link 1</li>
                 <li class="list-group-item">Link 2</li>
                 <li class="list-group-item">Link 3</li>
             </ul>
 
+            <!-- Subsection on/off toggle switch container -->
             <div class="callout" id="switch-toggle-all">
 
                 <h4>Results</h4>
               
                 <hr />
               
+                <!-- New York Times subsection on/off toggle switch -->
                 <div class="switch-toggle-wrapper">
                     <span>NYT</span>
                     <div class="switch">
@@ -49,6 +56,7 @@
                     </div>
                 </div>
               
+                <!-- Reddit subsection on/off toggle switch -->
                 <div class="switch-toggle-wrapper">
                     <span>Reddit</span>
                     <div class="switch">
@@ -59,6 +67,7 @@
                     </div>
                 </div>
               
+                <!-- Youtube subsection on/off toggle switch -->                
                 <div class="switch-toggle-wrapper">
                     <span>Youtube</span>
                     <div class="switch">
@@ -69,6 +78,7 @@
                     </div>
                 </div>
               
+                <!-- Spotify subsection on/off toggle switch -->                
                 <div class="switch-toggle-wrapper">
                     <span>Spotify</span>
                     <div class="switch">
@@ -81,12 +91,14 @@
               
             </div>
 
+            <!-- Light/dark mode toggle switch container -->
             <div class="callout" id="switch-toggle">
 
                 <h4>Settings</h4>
 
                 <hr/>
 
+                <!-- Light/dark mode toggle switch -->
                 <div class="switch-toggle-wrapper">
                     <span>Light / Dark</span>
                     <div class="switch">
@@ -100,8 +112,10 @@
 
         </div>
       
+        <!-- Main content section; contains subsections for each API -->
         <div class="holy-grail-middle">
             
+            <!-- New York Times API subsection -->
             <div class="news-section" id="times-content">
                 <h3>New York Times</h3>
 
@@ -156,10 +170,9 @@
                 </div>
             </div>
 
-
+            <!-- Spotify API subsection -->
             <div class="news-section" id="spotify-content">
                 <h3>Spotify</h3>
-            </div>
 
                 <div class="card">
                     <div class="news-card-tag">
@@ -187,6 +200,7 @@
                 </div>
             </div>
 
+            <!-- YouTube API subsection -->
             <div class="news-section" id="youtube-content">
                 <h3>Youtube</h3>
 
@@ -339,22 +353,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
                 
+            <!-- Reddit API subsection -->
             <div class="news-section" id="reddit-content">
                 <h3>Reddit</h3>
             </div>
 
         </div>
       
+        <!-- Footer, contains contributor attribution -->
         <div class="holy-grail-footer">
             <h3>&copy 2022 Greg Marzec, Brice Veyna, William Wei</h3>
         </div>
       
     </div>
       
-      
-      
-
+    <!-- JavaScript links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
