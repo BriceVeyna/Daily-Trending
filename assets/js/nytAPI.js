@@ -38,7 +38,7 @@ function nytGen() {
                 var labelSpan = document.createElement("span");
                 divContainer.appendChild(newDivTag);
                 labelSpan.innerHTML = data.results[i].section;
-                labelSpan.classList.add("label")
+                labelSpan.classList.add("label", "none")
                 var lineBreak = document.createElement("br");
                 newDivTag.appendChild(labelSpan);
                 newDivTag.appendChild(lineBreak);

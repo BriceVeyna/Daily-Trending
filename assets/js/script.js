@@ -5,6 +5,10 @@ var searchBtn = document.getElementById('searchButton');
 // Global variable for local storage
 var storedSearches = [];
 
+// Display current date and time
+$('#currentDate').text(moment().format("dddd, MMMM Do YYYY"));
+$('#currentTime').text(moment().format("h:mm A"));
+
 // Get searches from local storage
 function getStoredSearches() {
 
