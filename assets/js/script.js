@@ -76,6 +76,23 @@ searchBtn.addEventListener('click', function(event) {
     searchInputEl.value = '';
 })
 
+// Search for clicked recent search term from list
+searchListEl.addEventListener('click', function(event) {
+
+    // Create temporary variable for the target element
+    var element = event.target;
+
+    // Extract search term from target element, store in temporary variable and view in console
+    var searchTerm = element.innerHTML;
+    console.log(searchTerm);
+
+    // Initialize the New York Times API using the search term
+    nytGen(searchTerm);
+
+    // Initialize the Spotify API using the search term
+    
+})
+
 //result selector
 $(document).ready(function() {
     $(nytSwitch).click(function() {
