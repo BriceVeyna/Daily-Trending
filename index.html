@@ -4,10 +4,376 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Daily Trending</title>
 </head>
 <body>
+    <div class="holy-grail-grid">
+        
+        <!-- Header with program title, current date & time -->
+        <div class="holy-grail-header">
+            <h1>The Daily Trending</h1>
+            <h4 id="currentDate"></h4>
+            <h5 id="currentTime"></h5>
+        </div>
+      
+        <!-- Left aligned toolbar; contains search, filters, and light/dark mode -->
+        <div class="holy-grail-left">
+
+            <h3>Search</h3>
+
+            <!-- Search bar -->
+            <div class="input-group input-group-rounded">
+                <input id="inputField" class="input-group-field" type="search">
+                <div class="input-group-button">
+                    <input id="searchButton" type="submit" class="button secondary" value="Search">
+                </div>
+            </div>
+
+            <!-- Recent searches list -->
+            <div class="stacked button-group" id="search-list">
+
+            </div>
+
+            <!-- Subsection on/off toggle switch container -->
+            <div class="callout" id="switch-toggle-all">
+
+                <h4>Results</h4>
+              
+                <hr />
+              
+                <!-- New York Times subsection on/off toggle switch -->
+                <div class="switch-toggle-wrapper">
+                    <span>NYT</span>
+                    <div class="switch">
+                        <input class="switch-input" id="exampleSwitch1" type="checkbox" name="exampleSwitch1">
+                        <label class="switch-paddle" for="exampleSwitch1">
+                            <span class="show-for-sr">NYT</span>
+                        </label>
+                    </div>
+                </div>
+              
+                <!-- Reddit subsection on/off toggle switch -->
+                <div class="switch-toggle-wrapper">
+                    <span>Reddit</span>
+                    <div class="switch">
+                        <input class="switch-input" id="exampleSwitch2" type="checkbox" name="exampleSwitch2">
+                        <label class="switch-paddle" for="exampleSwitch2">
+                            <span class="show-for-sr">Reddit</span>
+                        </label>
+                    </div>
+                </div>
+              
+                <!-- Youtube subsection on/off toggle switch -->                
+                <div class="switch-toggle-wrapper">
+                    <span>Youtube</span>
+                    <div class="switch">
+                        <input class="switch-input" id="exampleSwitch3" type="checkbox" name="exampleSwitch3">
+                        <label class="switch-paddle" for="exampleSwitch3">
+                            <span class="show-for-sr">Youtube</span>
+                        </label>
+                    </div>
+                </div>
+              
+                <!-- Spotify subsection on/off toggle switch -->                
+                <div class="switch-toggle-wrapper">
+                    <span>Spotify</span>
+                    <div class="switch">
+                        <input class="switch-input" id="exampleSwitch4" type="checkbox" name="exampleSwitch4">
+                        <label class="switch-paddle" for="exampleSwitch4">
+                            <span class="show-for-sr">Spotify</span>
+                        </label>
+                    </div>
+                </div>
+              
+            </div>
+
+            <!-- Light/dark mode toggle switch container -->
+            <div class="callout" id="switch-toggle">
+
+                <h4>Settings</h4>
+
+                <hr/>
+
+                <!-- Light/dark mode toggle switch -->
+                <div class="switch-toggle-wrapper">
+                    <span>Light / Dark</span>
+                    <div class="switch">
+                        <input class="switch-input" id="exampleSwitch5" type="checkbox" name="exampleSwitch5">
+                        <label class="switch-paddle" for="exampleSwitch5">
+                            <span class="show-for-sr">Light / Dark</span>
+                        </label>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+      
+        <!-- Main content section; contains subsections for each API -->
+        <div class="holy-grail-middle">
+            
+            <!-- New York Times API subsection -->
+            <div class="news-section" id="times-content">
+                <h3>New York Times</h3>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                        <span class="label"><a href="#">Angular 2</a></span>
+                        <span class="label"><a href="#">Angular 4</a></span>
+                    </div>
+                    <div class="card news-card">
+                        <img src="https://i.imgur.com/6jMbuU1.jpg">
+                        <div class="card-section">
+                            <div class="news-card-date">Sunday, 16th April</div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                        <span class="label"><a href="#">Angular 2</a></span>
+                        <span class="label"><a href="#">Angular 4</a></span>
+                    </div>
+                    <div class="card news-card">
+                        <img src="https://i.imgur.com/6jMbuU1.jpg">
+                        <div class="card-section">
+                            <div class="news-card-date">Sunday, 16th April</div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify API subsection -->
+            <div class="news-section" id="spotify-content">
+                <h3>Spotify</h3>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                        <span class="label"><a href="#">Angular 2</a></span>
+                        <span class="label"><a href="#">Angular 4</a></span>
+                    </div>
+                    <div class="card news-card">
+                        <img src="https://i.imgur.com/6jMbuU1.jpg">
+                        <div class="card-section">
+                            <div class="news-card-date">Sunday, 16th April</div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube API subsection -->
+            <div class="news-section" id="youtube-content">
+                <h3>Youtube</h3>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-1"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">1</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-1">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-1">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-2"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">2</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-2">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-2">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-3"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">3</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-3">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-3">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-4"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">4</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-4">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-4">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-5"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">5</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-5">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-5">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="news-card-tag">
+                    </div>
+                    <div class="card news-card">
+                        <iframe id="embed-6"></iframe>
+                        <div class="card-section">
+                            <div class="news-card-date">
+                                <h3 class="rankings">6</h3>
+                            </div>
+                            <article class="news-card-article">
+                                <h4 class="news-card-title"><a href="#" id="video-title-6">5 Features To Watch Out For in Angular v4</a></h4>
+                                <p class="news-card-description" id="video-data-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                            </article>
+                            <div class="news-card-author">
+                                <div class="news-card-author-image">
+                                    <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" class="channel-icon">
+                                </div>
+                                <div class="news-card-author-name">
+                                    <a href="#" id="video-channel-6">Harry Manchanda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Reddit API subsection -->
+            <div class="news-section" id="reddit-content">
+                <h3>Reddit</h3>
+            </div>
+
+        </div>
+      
+        <!-- Footer, contains contributor attribution -->
+        <div class="holy-grail-footer">
+            <h3>&copy 2022 Greg Marzec, Brice Veyna, William Wei</h3>
+        </div>
+      
+    </div>
+      
+    <!-- JavaScript links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- <script src="./assets/js/spotify.js"></script> -->
+    <script src="./assets/js/nytAPI.js"></script>
+    <script src="./assets/js/reddit.js"></script>
+    <!-- <script src="./assets/js/youtube.js"></script> -->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
