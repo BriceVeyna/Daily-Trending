@@ -57,7 +57,7 @@ searchBtn.addEventListener('click', function(event) {
     console.log(searchInput);
 
     // Add search to existing search array, view in console
-    storedSearches.push(searchInput);
+    storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
     // Add search array (stringified) to local storage
