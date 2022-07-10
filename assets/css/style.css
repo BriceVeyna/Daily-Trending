@@ -153,9 +153,16 @@
 
 /* Cards */
 .card {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 10px;
     background: none;
+    border: none;
+}
+
+.none {
+    background:none;
     border: none;
 }
 
@@ -250,6 +257,7 @@
     vertical-align: middle;
 }
 
+
 .card-section {
     text-align: center;
 }
@@ -260,4 +268,14 @@
 
 .channel-icon:hover {
     cursor: pointer;
+
+
+#reddit-content img {
+    width: 100px;
+    height: 100px;
+}
+
+#reddit-content .card {
+    padding: 10px;
+
 }
