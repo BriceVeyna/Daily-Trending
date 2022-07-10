@@ -7,11 +7,11 @@ searchButton.click(function(event) {
     event.preventDefault
     input = inputField.value;
     console.log(input)
-    nytGen();
+    nytGen(input);
 })
 
 
-function nytGen() {
+function nytGen(input) {
     var url = "https://api.nytimes.com/svc/topstories/v2/" + input + ".json?api-key=3EhjUgQTBGHk7CXrATkMRdAWhhRYQrae";
     fetch(url)
         .then(function(response) {
