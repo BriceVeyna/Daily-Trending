@@ -7,7 +7,7 @@ function redditGen() {
             return response.json()
         })
         .then(function(data){
-            console.log(data)
+            //console.log(data)
             for (var i=0;i<3;i++){
                 var divCont = document.createElement("div");
                 divCont.classList.add("card");
