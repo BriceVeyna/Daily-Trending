@@ -80,10 +80,19 @@ function embed(data) {
         for (var j = 0; j < data.tracks.items[i].track.artists.length; j++) {
             if (j == 1) {
                 artistNameList[i].innerHTML += ", ";
+
+                var multipleArtists = document.createElement('a');
+                multipleArtists.innerHTML = data.tracks.items[i].track.artists[j].name;
+                multipleArtists.setAttribute('href', data.tracks.items[i].track.artists[j].external_urls.spotify);
+                multipleArtists.setAttribute('target', '_blank');
+                multipleArtists.classList.add('news-card-description');
+                artistNameList[i].appendChild(multipleArtists);
+            } else {
+                artistNameList[i].innerHTML += data.tracks.items[i].track.artists[j].name;
+                artistNameList[i].setAttribute('href', data.tracks.items[i].track.artists[j].external_urls.spotify);
+                artistNameList[i].setAttribute('target', '_blank');
             }
-            artistNameList[i].innerHTML += data.tracks.items[i].track.artists[j].name;
-            artistNameList[i].setAttribute('href', data.tracks.items[i].track.artists[j].external_urls.spotify);
-            artistNameList[i].setAttribute('target', '_blank');
+            
         }
     }
 
