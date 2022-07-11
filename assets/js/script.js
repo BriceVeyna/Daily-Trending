@@ -53,6 +53,7 @@ function addStoredSearches() {
         //console.log(storedSearch);
 
         // Create button with search term at index, display on recent search list
+        if (storedSearch == '') { continue; } // Does not create an element for an empty search
         var listRow = document.createElement('a');
         listRow.textContent = storedSearch;
         listRow.setAttribute('class', 'button');
@@ -67,7 +68,13 @@ searchBtn.addEventListener('click', function(event) {
     var searchInput = searchInputEl.value.trim();
     console.log(searchInput);
 
-    // Add search to existing search array, view in console
+    // Add search to existing search array if it was not a duplicate search, view in console
+    for (var i = 0; i < storedSearches.length; i++) {
+        if (storedSearches[i] == searchInput) {
+            searchInputEl.value = '';
+            return;
+        }
+    }
     storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
@@ -76,6 +83,9 @@ searchBtn.addEventListener('click', function(event) {
 
     // Clear search input field
     searchInputEl.value = '';
+
+    // Displaying the search in search history list
+    getStoredSearches();
 })
 
 // Search for clicked recent search term from list
@@ -93,6 +103,38 @@ searchListEl.addEventListener('click', function(event) {
 
     // Initialize the Spotify API using the search term
     
+})
+
+// Store the search when enter is pressed after typing a search 
+searchInputEl.addEventListener('keyup', function(event) {
+    event.preventDefault();
+    // Enter is an id of 13
+    if (event.which != 13) {
+        return;
+    }
+
+    // Store search in temporary variable, view in console
+    var searchInput = searchInputEl.value.trim();
+    console.log(searchInput);
+
+    // Add search to existing search array if it was not a duplicate search, view in console
+    for (var i = 0; i < storedSearches.length; i++) {
+        if (storedSearches[i] == searchInput) {
+            searchInputEl.value = '';
+            return;
+        }
+    }
+    storedSearches.unshift(searchInput);
+    console.log(storedSearches);
+
+    // Add search array (stringified) to local storage
+    localStorage.setItem('Searches', JSON.stringify(storedSearches));
+
+    // Clear search input field
+    searchInputEl.value = '';
+
+    // Displaying the search in search history list
+    getStoredSearches();
 })
 
 //result selector
