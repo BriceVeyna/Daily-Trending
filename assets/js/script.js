@@ -79,6 +79,9 @@ searchBtn.addEventListener('click', function(event) {
 
     // Clear search input field
     searchInputEl.value = '';
+
+    // Displaying the search in search history list
+    getStoredSearches();
 })
 
 // Search for clicked recent search term from list
@@ -119,6 +122,9 @@ searchInputEl.addEventListener('keyup', function(event) {
 
     // Clear search input field
     searchInputEl.value = '';
+
+    // Displaying the search in search history list
+    getStoredSearches();
 })
 
 //result selector
