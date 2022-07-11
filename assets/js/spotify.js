@@ -1,6 +1,7 @@
 var songEmbedList = document.querySelectorAll('.song-embed');
 var songNameList = document.querySelectorAll('.song-name');
 var albumNameList = document.querySelectorAll('.album-name');
+var artistNameList = document.querySelectorAll('.artist-name');
 
 var client_id = '17efc8febf1143c5be0fa975fa0836c8';
 var client_secret = '978a363fdfc643da8565312058af76b0';
@@ -75,6 +76,16 @@ function embed(data) {
         albumNameList[i].innerHTML = data.tracks.items[i].track.album.name + "<br>" + data.tracks.items[i].track.album.release_date;
         albumNameList[i].setAttribute('href', data.tracks.items[i].track.album.external_urls.spotify);
         albumNameList[i].setAttribute('target', '_blank');
+
+        // Displaying artist(s)
+        for (var j = 0; j < data.tracks.items[i].track.artists.length; j++) {
+            if (j == 1) {
+                artistNameList[i].innerHTML += ", ";
+            }
+            artistNameList[i].innerHTML += data.tracks.items[i].track.artists[j].name;
+            artistNameList[i].setAttribute('href', data.tracks.items[i].track.artists[j].external_urls.spotify);
+            artistNameList[i].setAttribute('target', '_blank');
+        }
     }
 
 }
