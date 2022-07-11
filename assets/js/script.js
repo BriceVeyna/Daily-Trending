@@ -53,9 +53,7 @@ function addStoredSearches() {
         //console.log(storedSearch);
 
         // Create button with search term at index, display on recent search list
-        if (storedSearch == '') {
-            return;
-        }
+        if (storedSearch == '') { continue; } // Does not create an element for an empty search
         var listRow = document.createElement('a');
         listRow.textContent = storedSearch;
         listRow.setAttribute('class', 'button');
