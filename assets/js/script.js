@@ -3,9 +3,9 @@ var searchInputEl = document.getElementById('inputField');
 var searchListEl = document.getElementById('search-list')
 var searchBtn = document.getElementById('searchButton');
 var nytSwitch = $("#exampleSwitch1");
-var redditSwitch = $("#exampleSwitch2");
+var spotifySwitch = $("#exampleSwitch2");
 var youtubeSwitch = $("#exampleSwitch3");
-var spotifySwitch = $("#exampleSwitch4");
+var redditSwitch = $("#exampleSwitch4");
 
 var timesContent = document.getElementById("times-content");
 var redditContent = document.getElementById("reddit-content");
