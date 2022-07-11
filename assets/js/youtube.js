@@ -95,11 +95,11 @@ function youtubeFetch(event) {
 
                     })
                 } else {
-                    alert('Error: ' + response2.statusText);
+                    console.log('Error: ' + response2.statusText);
                 }
             })
             .catch(function(error) {
-                alert('Unable to retrieve Youtube channels');
+                console.log('Unable to retrieve Youtube channels');
             });
 
             fetch(channelDataURLs[1])
@@ -123,11 +123,11 @@ function youtubeFetch(event) {
 
                         })
                     } else {
-                        alert('Error: ' + response2.statusText);
+                        console.log('Error: ' + response2.statusText);
                     }
                 })
                 .catch(function(error) {
-                    alert('Unable to retrieve Youtube channels');
+                    console.log('Unable to retrieve Youtube channels');
                 });
 
                 fetch(channelDataURLs[2])
@@ -151,11 +151,11 @@ function youtubeFetch(event) {
                             
                         })
                     } else {
-                        alert('Error: ' + response2.statusText);
+                        console.log('Error: ' + response2.statusText);
                     }
                 })
                 .catch(function(error) {
-                    alert('Unable to retrieve Youtube channels');
+                    console.log('Unable to retrieve Youtube channels');
                 });
 
                 fetch(channelDataURLs[3])
@@ -179,11 +179,11 @@ function youtubeFetch(event) {
                             
                         })
                     } else {
-                        alert('Error: ' + response2.statusText);
+                        console.log('Error: ' + response2.statusText);
                     }
                 })
                 .catch(function(error) {
-                    alert('Unable to retrieve Youtube channels');
+                    console.log('Unable to retrieve Youtube channels');
                 });
 
                 fetch(channelDataURLs[4])
@@ -207,11 +207,11 @@ function youtubeFetch(event) {
                             
                         })
                     } else {
-                        alert('Error: ' + response2.statusText);
+                        console.log('Error: ' + response2.statusText);
                     }
                 })
                 .catch(function(error) {
-                    alert('Unable to retrieve Youtube channels');
+                    console.log('Unable to retrieve Youtube channels');
                 });
 
                 fetch(channelDataURLs[5])
@@ -235,19 +235,19 @@ function youtubeFetch(event) {
                             
                         })
                     } else {
-                        alert('Error: ' + response2.statusText);
+                        console.log('Error: ' + response2.statusText);
                     }
                 })
                 .catch(function(error) {
-                    alert('Unable to retrieve Youtube channels');
+                    console.log('Unable to retrieve Youtube channels');
                 });
       })
     } else {
-      alert('Error: ' + response.statusText);
+      console.log('Error: ' + response.statusText);
     }
   })
   .catch(function(error) {
-    alert('Unable to retrieve Youtube videos');
+    console.log('Unable to retrieve Youtube videos');
   });
 }
 
