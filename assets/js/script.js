@@ -53,6 +53,9 @@ function addStoredSearches() {
         //console.log(storedSearch);
 
         // Create button with search term at index, display on recent search list
+        if (storedSearch == '') {
+            return;
+        }
         var listRow = document.createElement('a');
         listRow.textContent = storedSearch;
         listRow.setAttribute('class', 'button');
@@ -93,6 +96,29 @@ searchListEl.addEventListener('click', function(event) {
 
     // Initialize the Spotify API using the search term
     
+})
+
+// Execute a search when enter is pressed after typing a search 
+searchInputEl.addEventListener('keyup', function(event) {
+    event.preventDefault();
+    // Enter is an id of 13
+    if (event.which != 13) {
+        return;
+    }
+
+    // Store search in temporary variable, view in console
+    var searchInput = searchInputEl.value.trim();
+    console.log(searchInput);
+
+    // Add search to existing search array, view in console
+    storedSearches.unshift(searchInput);
+    console.log(storedSearches);
+
+    // Add search array (stringified) to local storage
+    localStorage.setItem('Searches', JSON.stringify(storedSearches));
+
+    // Clear search input field
+    searchInputEl.value = '';
 })
 
 //result selector
