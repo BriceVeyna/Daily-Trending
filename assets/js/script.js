@@ -68,7 +68,13 @@ searchBtn.addEventListener('click', function(event) {
     var searchInput = searchInputEl.value.trim();
     console.log(searchInput);
 
-    // Add search to existing search array, view in console
+    // Add search to existing search array if it was not a duplicate search, view in console
+    for (var i = 0; i < storedSearches.length; i++) {
+        if (storedSearches[i] == searchInput) {
+            searchInputEl.value = '';
+            return;
+        }
+    }
     storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
@@ -111,7 +117,13 @@ searchInputEl.addEventListener('keyup', function(event) {
     var searchInput = searchInputEl.value.trim();
     console.log(searchInput);
 
-    // Add search to existing search array, view in console
+    // Add search to existing search array if it was not a duplicate search, view in console
+    for (var i = 0; i < storedSearches.length; i++) {
+        if (storedSearches[i] == searchInput) {
+            searchInputEl.value = '';
+            return;
+        }
+    }
     storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
