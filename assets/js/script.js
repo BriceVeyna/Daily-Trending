@@ -120,7 +120,7 @@ $(document).ready(function() {
     })
 });
 
-//light/darkmode
+//light-darkmode
 
 function darkSwitch(event) {
     event.preventDefault();
@@ -129,10 +129,9 @@ function darkSwitch(event) {
     } else {
         document.documentElement.setAttribute("data-theme", "light");
     }
-}
-
+};
 themeSwitch.addEventListener("change", darkSwitch, false);
-console.log(themeSwitch);
 
 // Initialize getStoredSearches function
+
 getStoredSearches();

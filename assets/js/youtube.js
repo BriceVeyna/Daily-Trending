@@ -55,7 +55,7 @@ function youtubeFetch(event) {
   .then(function(response) {
     if (response.ok) {
       response.json().then(function(data) {
-        console.log(data);
+        //console.log(data);
         for (var i = 0; i < numberOfVideos; i++) {
             // Embedding the video
             embedList[i].setAttribute('src', baseEmbedURL + data.items[i].id);
@@ -78,10 +78,10 @@ function youtubeFetch(event) {
         .then(function(response2) {
                 if (response2.ok) {
                     response2.json().then(function(data2) {
-                        console.log(data2);
+                        //console.log(data2);
 
                         // Displaying channel name and creating a link to channel when clicked
-                        console.log(data2.items[0].snippet.title);
+                        //console.log(data2.items[0].snippet.title);
                         channelList[0].innerHTML = data2.items[0].snippet.title;
                         channelList[0].setAttribute('href', baseChannelURL + data2.items[0].id);
                         channelList[0].setAttribute('target', '_blank');
@@ -106,10 +106,10 @@ function youtubeFetch(event) {
                 .then(function(response2) {
                     if (response2.ok) {
                         response2.json().then(function(data2) {
-                            console.log(data2);
+                            //console.log(data2);
 
                             // Displaying channel name and creating a link to channel when clicked
-                            console.log(data2.items[0].snippet.title);
+                            //console.log(data2.items[0].snippet.title);
                             channelList[1].innerHTML = data2.items[0].snippet.title;
                             channelList[1].setAttribute('href', baseChannelURL + data2.items[0].id);
                             channelList[1].setAttribute('target', '_blank');
@@ -134,10 +134,10 @@ function youtubeFetch(event) {
                 .then(function(response2) {
                     if (response2.ok) {
                         response2.json().then(function(data2) {
-                            console.log(data2);
+                            ///console.log(data2);
 
                             // Displaying channel name and creating a link to channel when clicked
-                            console.log(data2.items[0].snippet.title);
+                            //console.log(data2.items[0].snippet.title);
                             channelList[2].innerHTML = data2.items[0].snippet.title;
                             channelList[2].setAttribute('href', baseChannelURL + data2.items[0].id);
                             channelList[2].setAttribute('target', '_blank');
@@ -162,10 +162,10 @@ function youtubeFetch(event) {
                 .then(function(response2) {
                     if (response2.ok) {
                         response2.json().then(function(data2) {
-                            console.log(data2);
+                            //console.log(data2);
 
                             // Displaying channel name and creating a link to channel when clicked
-                            console.log(data2.items[0].snippet.title);
+                            //console.log(data2.items[0].snippet.title);
                             channelList[3].innerHTML = data2.items[0].snippet.title;
                             channelList[3].setAttribute('href', baseChannelURL + data2.items[0].id);
                             channelList[3].setAttribute('target', '_blank');
@@ -190,10 +190,10 @@ function youtubeFetch(event) {
                 .then(function(response2) {
                     if (response2.ok) {
                         response2.json().then(function(data2) {
-                            console.log(data2);
+                            //console.log(data2);
 
                             // Displaying channel name and creating a link to channel when clicked
-                            console.log(data2.items[0].snippet.title);
+                            //console.log(data2.items[0].snippet.title);
                             channelList[4].innerHTML = data2.items[0].snippet.title;
                             channelList[4].setAttribute('href', baseChannelURL + data2.items[0].id);
                             channelList[4].setAttribute('target', '_blank');
@@ -218,10 +218,10 @@ function youtubeFetch(event) {
                 .then(function(response2) {
                     if (response2.ok) {
                         response2.json().then(function(data2) {
-                            console.log(data2);
+                            //console.log(data2);
 
                             // Displaying channel name and creating a link to channel when clicked
-                            console.log(data2.items[0].snippet.title);
+                            //console.log(data2.items[0].snippet.title);
                             channelList[5].innerHTML = data2.items[0].snippet.title;
                             channelList[5].setAttribute('href', baseChannelURL + data2.items[0].id);
                             channelList[5].setAttribute('target', '_blank');
@@ -259,7 +259,7 @@ youtubeFetch();
 for (var i = 0; i < channelIconList.length; i++) {
     channelIconList[i].addEventListener('click', function(event) {
         event.preventDefault();
-        console.log(event.target);
+        //console.log(event.target);
 
         window.open(event.target.getAttribute('data-link'), "_blank");
     })
