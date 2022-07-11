@@ -16,6 +16,7 @@ function nytGen(input) {
     fetch(url)
         .then(function(response) {
             if(!response.ok) {
+                alert("Try Again")
                 console.log("not working");
                 return
             }
