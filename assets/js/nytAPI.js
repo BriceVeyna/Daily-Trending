@@ -6,11 +6,12 @@ var nytDisplay = document.getElementById("times-content");
 searchButton.click(function(event) {
     event.preventDefault
     input = inputField.value;
-    nytGen();
+    console.log(input)
+    nytGen(input);
 })
 
 
-function nytGen() {
+function nytGen(input) {
     var url = "https://api.nytimes.com/svc/topstories/v2/" + input + ".json?api-key=3EhjUgQTBGHk7CXrATkMRdAWhhRYQrae";
     fetch(url)
         .then(function(response) {
@@ -73,32 +74,6 @@ function nytGen() {
                 cardFooter.classList.add("news-card-author");
                 cardFooter.innerHTML = data.results[i].byline;
                 divHeadCont.appendChild(cardFooter);
-
-                // labelHfref.href = data.results[i].section;
-                // labelSpan.appendChild(labelHfref);
-
-                // newDivContainer.appendChild(newDivTag);
-                // newDivContainer.appendChild(labelSpan);
-
-                
-
-
-
-
-
-                //var newDiv = document.createElement("div");
-                //nytDisplay.appendChild(newDiv);
-                //var head = document.createElement("h3");
-                //var absP = document.createElement("p");
-                //var link = document.createElement("p");
-                //var title = data.results[i].title;
-                //var abstract = data.results[i].abstract;
-                // head.innerHTML = title;
-                // absP.innerHTML = abstract;
-                // link.innerHTML = data.results[i].short_url;
-                //newDiv.appendChild(head);
-                //newDiv.appendChild(absP);
-                //newDiv.appendChild(link)
             }
         })
 }
