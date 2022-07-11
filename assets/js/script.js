@@ -68,6 +68,12 @@ searchBtn.addEventListener('click', function(event) {
     var searchInput = searchInputEl.value.trim();
     console.log(searchInput);
 
+    // Input validation: makes sure the search was not empty
+    if (searchInput == '') {
+        searchInputEl.value = '';
+        return;
+    }
+
     // Add search to existing search array if it was not a duplicate search, view in console
     for (var i = 0; i < storedSearches.length; i++) {
         if (storedSearches[i] == searchInput) {
@@ -78,7 +84,10 @@ searchBtn.addEventListener('click', function(event) {
     storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
-    // Add search array (stringified) to local storage
+    // Add search array (stringified) to local storage, with a limit of 10 searches
+    if (storedSearches.length > 10) {
+        storedSearches.pop();
+    }
     localStorage.setItem('Searches', JSON.stringify(storedSearches));
 
     // Clear search input field
@@ -117,6 +126,12 @@ searchInputEl.addEventListener('keyup', function(event) {
     var searchInput = searchInputEl.value.trim();
     console.log(searchInput);
 
+    // Input validation: makes sure the search was not empty
+    if (searchInput == '') {
+        searchInputEl.value = '';
+        return;
+    }
+
     // Add search to existing search array if it was not a duplicate search, view in console
     for (var i = 0; i < storedSearches.length; i++) {
         if (storedSearches[i] == searchInput) {
@@ -127,7 +142,10 @@ searchInputEl.addEventListener('keyup', function(event) {
     storedSearches.unshift(searchInput);
     console.log(storedSearches);
 
-    // Add search array (stringified) to local storage
+    // Add search array (stringified) to local storage, with a limit of 10 searches
+    if (storedSearches.length > 10) {
+        storedSearches.pop();
+    }
     localStorage.setItem('Searches', JSON.stringify(storedSearches));
 
     // Clear search input field

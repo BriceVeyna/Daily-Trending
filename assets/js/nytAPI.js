@@ -27,6 +27,7 @@ function nytGen(input) {
         .then(function(response) {
             if(!response.ok) {
                 console.log("not working");
+                
                 return
             }
             return response.json()
