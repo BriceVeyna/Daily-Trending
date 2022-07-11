@@ -98,7 +98,7 @@ searchListEl.addEventListener('click', function(event) {
     
 })
 
-// Execute a search when enter is pressed after typing a search 
+// Store the search when enter is pressed after typing a search 
 searchInputEl.addEventListener('keyup', function(event) {
     event.preventDefault();
     // Enter is an id of 13

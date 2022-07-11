@@ -3,13 +3,23 @@ var searchButton = $("#searchButton");
 var nytDisplay = document.getElementById("times-content");
 
 
+// Search on click
 searchButton.click(function(event) {
     event.preventDefault
-    input = inputField.value;
+    input = inputField.value.trim();
     console.log(input)
     nytGen(input);
 })
 
+// Search on enter
+inputField.addEventListener('keyup', function(event) {
+    event.preventDefault();
+    if (event.which != 13) {
+        return;
+    }
+
+    nytGen(inputField.value.trim());
+})
 
 function nytGen(input) {
     var url = "https://api.nytimes.com/svc/topstories/v2/" + input + ".json?api-key=3EhjUgQTBGHk7CXrATkMRdAWhhRYQrae";
