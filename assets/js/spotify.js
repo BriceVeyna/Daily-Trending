@@ -1,3 +1,7 @@
+var songEmbedList = document.querySelectorAll('.song-embed');
+var songNameList = document.querySelectorAll('.song-name');
+var albumNameList = document.querySelectorAll('.album-name');
+
 var client_id = '17efc8febf1143c5be0fa975fa0836c8';
 var client_secret = '978a363fdfc643da8565312058af76b0';
 
@@ -24,6 +28,7 @@ async function authorize() {
     return res.access_token; 
 }
 
+// Searching the API for the Top 50 Global playlist
 async function search() {
     // Calling authorize() to get the access token
     const access_token = await this.authorize();
@@ -46,7 +51,32 @@ async function search() {
     // Fetching the playlist data
     let res = await fetch(FETCH_URL, requestOptions);
     res = await res.json();
-    console.log(res);
+    embed(res);
+}
+
+function embed(data) {
+    console.log(data);
+
+    const BASE_ARTIST_URL = 'https://open.spotify.com/artist/';
+    const BASE_EMBED_URL = 'https://open.spotify.com/embed/track/';
+    const END_EMBED_URL = '?utm_source=generator';
+
+    for (var i = 0; i < songEmbedList.length; i++) {
+        // Embedding the song to the page
+        songEmbedList[i].setAttribute('src', BASE_EMBED_URL + data.tracks.items[i].track.id + END_EMBED_URL);
+        songEmbedList[i].setAttribute('width', '100%');
+        
+        // Displaying track name
+        songNameList[i].innerHTML = data.tracks.items[i].track.name;
+        songNameList[i].setAttribute('href', data.tracks.items[i].track.external_urls.spotify);
+        songNameList[i].setAttribute('target', '_blank');
+
+        // Displaying album name and release date
+        albumNameList[i].innerHTML = data.tracks.items[i].track.album.name + "<br>" + data.tracks.items[i].track.album.release_date;
+        albumNameList[i].setAttribute('href', data.tracks.items[i].track.album.external_urls.spotify);
+        albumNameList[i].setAttribute('target', '_blank');
+    }
+
 }
 
 search();
