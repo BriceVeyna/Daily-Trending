@@ -33,7 +33,6 @@ async function authorize() {
 async function search() {
     // Calling authorize() to get the access token
     const access_token = await this.authorize();
-    console.log(access_token);
 
     // Fetching the data from Spotify's daily updating Top 50 Global playlist 
     playlist_id = '37i9dQZEVXbMDoHDwVN2tF';
