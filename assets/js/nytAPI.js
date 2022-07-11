@@ -75,6 +75,7 @@ function nytGen(input) {
                 newh4.classList.add("news-card-title");
                 var newA = document.createElement("a")
                 newA.setAttribute("href",data.results[i].url);
+                newA.setAttribute('target', '_blank');
                 newA.innerText = data.results[i].abstract;
                 newh4.appendChild(newA);
                 divHead.appendChild(newArt);
