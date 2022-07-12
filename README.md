@@ -24,6 +24,9 @@ This project creates an application that displays top trending content from Yout
 - Reddit API
 - Spotify API
 
+## Website Demo
+[Website Demonstration](../Daily%20Trending.webm)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
