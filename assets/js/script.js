@@ -35,7 +35,7 @@ function getStoredSearches() {
         //console.log(storedSearches);
     }
 
-    // Initialize addStoredSearches function
+    // Adding the stored searches to the search history bar
     addStoredSearches();
 }
 
