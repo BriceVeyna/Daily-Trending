@@ -26,10 +26,10 @@ This project creates an application that displays top trending content from Spot
 https://user-images.githubusercontent.com/57912371/178804077-233ee7c9-7845-4701-9d29-6d4954291356.mov
 
 ## User Stories
-As a user, I want a search bar so that I can look for topics of interest.
-As a user, I want saved searches so that I can quickly find topics that I view regularly.
-As a user, I want to filter by source type so that I can toggle on and off display formats and content types based on preference
-As a user, I want a light/dark mode so that I can switch between display styles depending on time of day.
+As a user, I want a search bar so that I can look for topics of interest.  
+As a user, I want saved searches so that I can quickly find topics that I view regularly.  
+As a user, I want to filter by source type so that I can toggle on and off display formats and content types based on preference  
+As a user, I want a light/dark mode so that I can switch between display styles depending on time of day.  
 As a user, I want to see the current date and time so that I know the site is up to date.
 
 ## License
