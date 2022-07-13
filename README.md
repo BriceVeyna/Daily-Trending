@@ -23,7 +23,7 @@ This project creates an application that displays top trending content from Spot
 - Spotify API
 
 ## Website Demo
-[Website Demonstration](Daily%20Trending.mov)
+https://user-images.githubusercontent.com/57912371/178804077-233ee7c9-7845-4701-9d29-6d4954291356.mov
 
 ## User Stories
 As a user, I want a search bar so that I can look for topics of interest.
